@@ -1,5 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+
 $navbar-default-bg: #ffffff;
 $navbar-default-border: #ffffff;
 
+$font-family: 'Ubuntu', sans-serif;
+
+$font-family-sans-serif: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 @import 'bootstrap';
+@import 'bootstrap-sprockets';
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
