@@ -11,7 +11,7 @@
       <span class="icon-bar"></span>
     </button>
 
-    <%= link_to image_tag("/assets/logo1.png", :class => "navbar-brand", :style => "margin: 0px; float: none; width: 290px; height: 90px;"), root_path %>
+    <%= link_to image_tag("https://s3.amazonaws.com/rememberch/site_files/logo1.png", :class => "navbar-brand", :style => "margin: 0px; float: none; width: 290px; height: 90px;"), root_path %>
     
   </div>
 
@@ -24,8 +24,9 @@
 
       <% if user_signed_in? %>
       <li><%= link_to 'New Pin', new_pin_path %></li>
+      <li><%= link_to "Account Settings", edit_user_registration_path %></li>
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+          
         <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
         <% end %>
