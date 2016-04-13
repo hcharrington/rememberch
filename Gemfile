@@ -24,6 +24,12 @@ gem 'will_paginate', '~> 3.1'
 
 gem 'will_paginate-bootstrap'
 
+
+gem 'omniauth'
+
+gem 'omniauth-facebook'
+
+
 group :development, :test do
      gem 'sqlite3'
 
