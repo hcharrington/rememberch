@@ -36,6 +36,8 @@
           
         <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
+
+           <li><%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook) %></li>
         <% end %>
 
 
