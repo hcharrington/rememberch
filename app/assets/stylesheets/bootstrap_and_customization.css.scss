@@ -28,3 +28,25 @@ background-image: url("https://s3.amazonaws.com/rememberch/site_files/logo1.png"
 background-size: cover;
 min-height: 400px;
 }
+
+
+.jumbotron .buttons_div {
+position: relative;
+top: 50%;
+margin: 0 auto;
+width: 170px;
+height: 25px; }
+
+.buttons_div .button_1 {
+float: left;
+margin-top: 0;
+margin-left: 0;
+width: 80px;
+height: 25px; }
+
+.buttons_div .button_2 {
+float: left;
+margin-top: 0;
+margin-left: 10px;
+width: 80px;
+height: 25px; }
