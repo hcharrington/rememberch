@@ -11,7 +11,7 @@
       <span class="icon-bar"></span>
     </button>
 
-    <%= link_to image_tag("https://s3.amazonaws.com/rememberch/site_files/logo1.png", :class => "navbar-brand", :style => "margin: 0px; float: none; width: 290px; height: 90px;"), root_path %>
+    <%= link_to image_tag("https://s3.amazonaws.com/rememberch/site_files/logo1.png", :class => "navbar-brand", :style => "margin: 0px; float: none; width: 468px; height: 144px;"), root_path %>
     
   </div>
 
@@ -37,7 +37,7 @@
         <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
 
-           <li><%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+           <li><%= link_to "Sign up with Facebook", user_omniauth_authorize_path(:facebook), :class => "popup", :"data-width" => 600, :"data-height" => 400 %></li>
         <% end %>
 
 
