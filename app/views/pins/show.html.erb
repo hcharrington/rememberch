@@ -2,9 +2,9 @@
 
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
-    <div class="panel panel-default">
+    <div class="panel panel-info">
     <div class="panel-heading center">
-      <%= image_tag @pin.image.url %>
+      <%= image_tag @pin.image.url(:large)%>
     </div>
     <div class="panel-body">
     <p><%= @pin.description %></p>
@@ -19,4 +19,18 @@
     </div>
   </div>
 
+
+<% $pin = @pin.id %>
+
+
+
+
+<div class="fb-comments" data-href="https://rememberch.herokuapp.com?pin=<%= $pin %>" data-width="500" data-numposts="5"></div>
+
+<%= $pin %>
+
 </div>
+
+
+
+

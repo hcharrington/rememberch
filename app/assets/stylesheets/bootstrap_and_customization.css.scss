@@ -45,3 +45,31 @@ color: white;
 }
 
 
+.panel-heading.center {
+	display:inline-block;
+}
+
+.panel.panel-info {
+	 display:inline-block;
+}
+
+
+#bottom-right-corner {
+    position: fixed;  /* Pin to the window */
+    z-index: 9999; /* Keep on top of all other content */
+    bottom: 0px; /* Keep the bottom on the bottom of the page */
+    right: 20px; /* Keep the right just away from the right edge */
+}
+
+
+#bottom-right-corner img:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+#pins img:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+
