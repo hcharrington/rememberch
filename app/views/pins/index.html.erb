@@ -18,6 +18,22 @@
               <span class="glyphicon glyphicon-trash"></span>
               Delete
             <% end %>
+
+<%= link_to like_pin_path(pin), method: :put do %>
+<br>
+  <span class="glyphicon glyphicon-arrow-up"></span>
+  Like
+  <%= pin.get_upvotes.size %>
+<% end %>
+
+<%= link_to unlike_pin_path(pin), method: :put do %>
+<br>
+<span class="glyphicon glyphicon-arrow-down"></span>
+  Dislike
+  <%= pin.get_downvotes.size %>
+<% end %>
+
+
           </div>
         <% end %>
         

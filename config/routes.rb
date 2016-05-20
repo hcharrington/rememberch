@@ -6,5 +6,13 @@ Rails.application.routes.draw do
 
   get "about" => "pages#about"
 
+
+resources :pins do
+  member do
+    put "like", to: "pins#upvote"
+    put "unlike", to: "pins#downvote"
+  end
+end
+  
   
 end

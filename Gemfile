@@ -29,6 +29,8 @@ gem 'omniauth'
 
 gem 'omniauth-facebook'
 
+gem 'acts_as_votable'
+
 
 group :development, :test do
      gem 'sqlite3'

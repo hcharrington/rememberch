@@ -6,7 +6,7 @@ class PinsController < ApplicationController
  
   
   def index
-   @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+   @pins = Pin.all.order(:cached_votes_score => :desc).paginate(:page => params[:page], :per_page => 8)
  end
 
 
@@ -46,6 +46,22 @@ class PinsController < ApplicationController
     redirect_to pins_url
   end
 
+    def upvote 
+  @pin = Pin.find(params[:id])
+  @pin.upvote_by current_user
+  redirect_to :back
+end  
+
+
+def downvote
+  @pin = Pin.find(params[:id])
+  @pin.downvote_by current_user
+  redirect_to :back
+end
+
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pin
@@ -61,4 +77,9 @@ class PinsController < ApplicationController
     def pin_params
       params.require(:pin).permit(:description, :image)
     end
+
+
+
+  
+
 end
