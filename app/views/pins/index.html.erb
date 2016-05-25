@@ -20,15 +20,15 @@
             <% end %>
 
 <%= link_to like_pin_path(pin), method: :put do %>
-<br>
-  <span class="glyphicon glyphicon-arrow-up"></span>
+
+  <span class="glyphicon glyphicon-thumbs-up"></span>
   Like
   <%= pin.get_upvotes.size %>
 <% end %>
 
 <%= link_to unlike_pin_path(pin), method: :put do %>
 <br>
-<span class="glyphicon glyphicon-arrow-down"></span>
+<span class="glyphicon glyphicon-thumbs-down"></span>
   Dislike
   <%= pin.get_downvotes.size %>
 <% end %>
