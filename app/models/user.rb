@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
 
         # user.image = "http://graph.facebook.com/#{self.uid}/picture?type=normal"
 
+        # user.image = "#{options[:secure_image_url] ? 'https' : 'http'}://graph.facebook.com/#{uid}/picture?type=square",
+
+        user.image = auth["info"]["image"]
+
 
       end
   end
