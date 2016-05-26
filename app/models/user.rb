@@ -19,7 +19,11 @@ class User < ActiveRecord::Base
        # user.name = auth.info.first_name
         # user.name = oauth_data["info"]["first_name"]
         user.name = auth.info.name
-        user.image = auth.info.image
+        # user.image = auth.info.image
+
+        user.image = "http://graph.facebook.com/#{self.uid}/picture?type=normal"
+
+
       end
   end
 
